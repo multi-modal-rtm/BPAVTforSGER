@@ -1,0 +1,19 @@
+# MODEL OPTIONS (choose one):
+# MBTScratch, VATTScratch, AVAdapterScratch, CrossModalAdapterScratch
+# VATTPretrained, AVAdapterPretrained, CrossModalAdapter
+model: "MBTScratch"
+
+dataset:
+  name: "OUC-CGE"
+  video_dir: "data/OUC-CGE/videos"
+  label_dir: "data/OUC-CGE/labels"
+  features_dir: "data/OUC-CGE/features"
+
+training:
+  batch_size: 4
+  epochs: 10
+  learning_rate: 0.0001
+  device: "cuda"
+
+# Optional: freeze backbones in pretrained models (only used if applicable)
+freeze_backbones: true

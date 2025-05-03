@@ -1,0 +1,9 @@
+torch>=1.12
+torchvision
+torchaudio
+transformers
+scikit-learn
+pandas
+tqdm
+pyyaml
+matplotlib
