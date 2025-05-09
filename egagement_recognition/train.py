@@ -10,6 +10,14 @@ from torch.utils.tensorboard import SummaryWriter
 from engagement_recognition.dataloader import make_dataloader
 from engagement_recognition.models import EngagementNet
 from engagement_recognition.utils import save_checkpoint, AverageMeter, load_checkpoint
+from engagement_recognition.callbacks import EarlyStopping, LRSchedulerCallback
+
+early_stopper = EarlyStopping(patience=7, delta=1e-3)
+scheduler_cb = LRSchedulerCallback(
+    scheduler=torch.optim.lr_scheduler.ReduceLROnPlateau(optimizer, 'max'),
+    step_on_batch=False
+)
+
 
 def train():
     # ─── Load config ──────────────────────────────
@@ -84,6 +92,15 @@ def train():
             "scaler_state": scaler.state_dict(),
             "best_acc":  best_acc
         }, is_best, cfg.logging.ckpt_dir)
+
+        # step LR scheduler (if epoch-based)
+        scheduler_cb.on_epoch_end()
+
+        # check early stopping
+        early_stopper(val_acc)
+        if early_stopper.early_stop:
+            print("Stopping early!")
+            break
 
     writer.close()
 

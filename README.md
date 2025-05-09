@@ -40,8 +40,8 @@ engagement\_recognition/
 
 ```bash
 # Clone repo
-git clone https://github.com/yourusername/engagement_recognition.git
-cd engagement_recognition
+git https://github.com/multi-modal-rtm/BPAVTforSGER.git
+cd BPAVTforSGER
 
 # Create env & install
 python3 -m venv .venv
@@ -104,7 +104,7 @@ Adjust:
 
 ```bash
 # From repo root
-python -m engagement_recognition.train
+python -m BPAVTforSGER.train
 ```
 
 * Checkpoints (`last.pth`, `best.pth`) appear under `outputs/checkpoints/`.
@@ -115,7 +115,7 @@ python -m engagement_recognition.train
 ## 🔍 Testing & Evaluation
 
 ```bash
-python -m engagement_recognition.test
+python -m BPAVTforSGER.test
 ```
 
 This prints:
