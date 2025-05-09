@@ -1,4 +1,4 @@
-```markdown
+
 # BPAVTforSGER: Benchmarking Pre-trained Audio-Visual Transformers for Small-Group Engagement Recognition
 
 This repository implements a unified pipeline for benchmarking A/V transformers on three engagement datasets (DAiSEE, OUC-CGE, AMI). It supports four models (MBT, VATT, AVT, Video-Swin) with pretrained Kinetics-400 weights when available.
@@ -7,7 +7,6 @@ This repository implements a unified pipeline for benchmarking A/V transformers 
 
 ## 📁 Project Structure
 
-```
 
 engagement\_recognition/
 ├── configs/
