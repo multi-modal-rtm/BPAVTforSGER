@@ -18,5 +18,5 @@ __pycache__/
 Thumbs.db
 
 # Data & Models
-data/
-checkpoints/
+# data/
+# checkpoints/

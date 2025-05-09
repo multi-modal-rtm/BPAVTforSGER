@@ -1,0 +1,29 @@
+# ─── Data settings ───────────────────────────────────────────────
+data:
+  roots:
+    daisee:  /mnt/data/DAiSEE      # path to DAiSEE folder
+    ouc_cge: /mnt/data/OUC-CGE     # path to OUC-CGE folder
+    ami:     /mnt/data/AMI         # path to AMI folder
+  batch_size:  8                  # per-GPU batch size
+  num_workers: 4                  # DataLoader num_workers
+
+# ─── Model settings ──────────────────────────────────────────────
+model:
+  name:             mbt            # one of: mbt, vatt, avt, swin
+  pretrained:       true           # load Kinetics-400 weights if available
+  num_classes:      4              # total engagement categories
+  backbone_feat_dim: 512           # fallback feature dim for custom backbones
+
+# ─── Training settings ───────────────────────────────────────────
+training:
+  epochs:           30             # total number of epochs
+  lr:               1e-4           # AdamW learning rate
+  weight_decay:     1e-5           # AdamW weight decay
+  fp16:             true           # mixed-precision training
+  resume_from:      null           # path to checkpoint to resume, or null
+
+# ─── Logging & Checkpointing ─────────────────────────────────────
+logging:
+  log_dir:          outputs/logs   # TensorBoard logs go here
+  ckpt_dir:         outputs/checkpoints  # checkpoints go here
+  log_interval:     50             # how many batches between train-loss logs
