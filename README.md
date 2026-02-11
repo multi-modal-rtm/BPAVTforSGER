@@ -16,7 +16,7 @@ DAiSEE: Multi-label dataset for academic engagement.
 ## Repository Structure
 
 The project is organized by dataset, with sub-projects corresponding to specific experimental strategies:
-
+```
 .
 ├── EngageNet/
 │   ├── engagenet_benchmark/            # Baseline and Mixup experiments
@@ -29,7 +29,7 @@ The project is organized by dataset, with sub-projects corresponding to specific
     ├── daisee_benchmark/               # Baseline DAiSEE implementation
     ├── daisee_benchmark_finetuning/    # Fine-tuning experiments
     └── daisee_benchmark_focalloss/     # Focal Loss implementation
-
+```
 
 ## Getting Started
 
@@ -43,9 +43,9 @@ The project is organized by dataset, with sub-projects corresponding to specific
 
 Clone the repository and install dependencies for the relevant dataset folder:
 
- - `git clone [https://github.com/your-username/BPAVTforSGER.git](https://github.com/your-username/BPAVTforSGER.git)
-cd BPAVTforSGER`
-- go to target project folder
+ - `git clone https://github.com/multi-modal-rtm/BPAVTforSGER`
+ - `cd BPAVTforSGER`
+ - `go to target project folder`
  - `pip install -r requirements.txt`
 
 
@@ -54,8 +54,8 @@ cd BPAVTforSGER`
 Each sub-project utilizes Hydra for configuration management. Navigate to a specific sub-project and run the training script:
 
 #### Example: Running ViT on EngageNet with Mixup
-`cd EngageNet/engagenet_benchmark`
-`python -m src.train --config-name=vit`
+- `cd EngageNet/engagenet_benchmark`
+- `python -m src.train --config-name=vit`
 
 
 ## Experimental Strategies
