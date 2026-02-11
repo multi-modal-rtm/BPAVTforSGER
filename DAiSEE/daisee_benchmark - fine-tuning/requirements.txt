@@ -1,0 +1,15 @@
+numpy<2.3
+pandas
+opencv-python
+scikit-learn
+pyyaml
+librosa
+soundfile
+timm
+transformers
+tqdm
+numba
+Pillow
+easydict
+decord
+matplotlib

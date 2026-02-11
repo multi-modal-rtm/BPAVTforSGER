@@ -1,0 +1,17 @@
+model_name: "swin"
+
+output_dir: "D:/Abdulaziz/daisee_benchmark - fine-tuning/results/swin"
+
+data:
+  raw_data_root: "D:/Abdulaziz/daisee_benchmark - fine-tuning/DAiSEE_Dataset_Raw/daisee_dataset/DAiSEE"
+  data_mode: "video_only"
+  use_audio: false
+  num_workers: 4
+
+training:
+  batch_size: 2
+  epochs: 100
+  num_frames: 16
+  learning_rate: 0.00001
+  optimizer: "adamw"
+  num_labels: 4

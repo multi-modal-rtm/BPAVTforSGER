@@ -1,0 +1,92 @@
+project_name: EngageNet-Benchmark
+seed: 42
+device: cuda
+
+# --- Data Paths ---
+data_root: D:/Abdulaziz/engagenet_benchmark/EngageNet
+train_csv: ${data_root}/train_engagement_labels.xlsx
+val_csv: ${data_root}/validation_engagement_labels.xlsx
+test_csv: ${data_root}/test_engagement_labels.csv # UPDATE THIS PATH
+
+# --- Data Preprocessing ---
+num_classes: 4
+input_clip_length: 10
+num_frames: 16
+frame_rate: 30
+audio_sampling_rate: 16000
+
+# --- Training Hyperparameters ---
+num_workers: 2 # Reduced for stability on Windows
+epochs: 100
+batch_size: 2
+optimizer: AdamW
+learning_rate: 1.0e-05
+weight_decay: 0.05
+lr_scheduler: CosineAnnealingLR
+lr_warmup_epochs: 5
+min_lr: 1.0e-06
+early_stopping_patience: 20
+
+# --- Loss Configuration (Corrected Structure) ---
+loss:
+  name: FocalLoss # Can be 'FocalLoss' or 'CrossEntropyLoss'
+  gamma: 2.0
+  class_weights:
+    - 1.9031
+    - 1.188
+    - 0.5267
+    - 1.3622
+
+# --- Output ---
+output_dir: ./outputs
+save_freq: 5
+log_freq: 100
+
+
+
+
+
+
+
+
+
+
+
+# project_name: EngageNet-Benchmark
+# seed: 42
+# device: cuda
+
+# data_root: D:/Abdulaziz/engagenet_benchmark/EngageNet
+# train_csv: D:/Abdulaziz/engagenet_benchmark/EngageNet/train_engagement_labels.xlsx
+# val_csv: D:/Abdulaziz/engagenet_benchmark/EngageNet/validation_engagement_labels.xlsx
+# test_csv: D:/Abdulaziz/engagenet_benchmark/EngageNet/test_engagement_labels.csv 
+
+# num_classes: 4
+# input_clip_length: 10
+# num_frames: 16
+# frame_rate: 30
+# audio_sampling_rate: 16000
+# num_workers: 2
+
+# epochs: 100
+# batch_size: 2
+# optimizer: AdamW
+# learning_rate: 4.0e-06 
+
+# loss_function: FocalLoss 
+
+# class_weights: [1.9031, 1.188, 0.5267, 1.3622] 
+
+# focal_loss_gamma: 2.0
+
+# weight_decay: 0.05
+# lr_scheduler: CosineAnnealingLR
+# lr_warmup_epochs: 5
+# min_lr: 1.0e-08
+# early_stopping_patience: 100
+
+# output_dir: ./outputs
+# save_freq: 5
+# log_freq: 100
+
+# # modality: video

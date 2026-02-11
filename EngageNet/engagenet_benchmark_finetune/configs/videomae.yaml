@@ -1,0 +1,18 @@
+defaults:
+  - base_finetune
+
+modality: "video"
+
+model:
+  name: "VideoMAE"
+  finetune: true
+  # Using the base variant of VideoMAE pretrained on Kinetics-400
+  variant: "OpenGVLab/VideoMAEv2-Base"
+  pretrained: True
+
+# --- Overrides (Optional) ---
+# VideoMAE might have specific input requirements or memory usage.
+# For example, it was pretrained on 16-frame clips.
+# We can adjust parameters here if needed.
+# num_frames: 16
+# batch_size: 8

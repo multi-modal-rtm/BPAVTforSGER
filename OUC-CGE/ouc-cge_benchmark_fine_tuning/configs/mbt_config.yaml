@@ -1,0 +1,19 @@
+model_name: "mbt"
+data_mode: "audiovisual" 
+
+root_dir: "D:/Abdulaziz/ouc-cge_benchmark_fine_tuning/OUC-CGE"
+results_dir: "D:/Abdulaziz/ouc-cge_benchmark_fine_tuning/results/mbt_experiment"
+train_csv: "train.csv"
+val_csv: "val.csv"
+test_csv: "test.csv"
+
+epochs: 100
+batch_size: 1 
+num_workers: 8
+learning_rate: 0.00001
+optimizer: "AdamW"
+
+class_weights: [0.84, 1.21, 0.95]
+
+num_frames: 16
+target_audio_len: 1024

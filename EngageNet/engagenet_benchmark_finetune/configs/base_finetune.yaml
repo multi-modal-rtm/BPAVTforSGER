@@ -1,0 +1,38 @@
+project_name: "EngageNet-Benchmark"
+seed: 42
+device: "cuda"
+
+data_root: D:/Abdulaziz/engagenet_benchmark_finetune/EngageNet
+train_csv: D:/Abdulaziz/engagenet_benchmark_finetune/EngageNet/train_engagement_labels.xlsx
+val_csv: D:/Abdulaziz/engagenet_benchmark_finetune/EngageNet/validation_engagement_labels.xlsx
+test_csv: D:/Abdulaziz/engagenet_benchmark_finetune/EngageNet/test_engagement_labels.csv
+
+num_classes: 4
+input_clip_length: 10
+num_frames: 16
+frame_rate: 30
+audio_sampling_rate: 16000
+
+num_workers: 8 
+epochs: 100
+batch_size: 1
+optimizer: AdamW
+learning_rate: 1.0e-06
+weight_decay: 0.05
+lr_scheduler: CosineAnnealingLR
+lr_warmup_epochs: 5
+min_lr: 1.0e-07
+early_stopping_patience: 20
+
+loss:
+  name: FocalLoss 
+  gamma: 3.0
+  class_weights:
+    - 1.9031
+    - 1.188
+    - 0.5267
+    - 1.3622
+
+output_dir: ./outputs
+save_freq: 5
+log_freq: 100

@@ -1,0 +1,13 @@
+# Virtual environment
+venv/
+
+# Datasets and heavy folders
+OUC-CGE/
+outputs/
+videomae_experiment/
+
+# Media files
+*.mp4
+
+# IDE folders
+.vscode/

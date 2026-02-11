@@ -1,0 +1,9 @@
+defaults:
+  - base
+
+modality: "video"
+
+model:
+  name: "VideoMAE"
+  variant: "OpenGVLab/VideoMAEv2-Base"
+  pretrained: True

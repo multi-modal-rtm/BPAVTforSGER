@@ -1,0 +1,10 @@
+defaults:
+  - base
+
+modality: "video"
+
+model:
+  name: "MaxViT"
+
+  variant: "maxvit_base_tf_224.in1k"
+  pretrained: True

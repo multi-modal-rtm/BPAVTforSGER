@@ -1,0 +1,19 @@
+model_name: "vit"
+output_dir: "D:/Abdulaziz/daisee_benchmark - fine-tuning/results/vit"
+
+data:
+  raw_data_root: "D:/Abdulaziz/daisee_benchmark - fine-tuning/DAiSEE_Dataset_Raw/daisee_dataset/DAiSEE"
+  
+  use_audio: false
+  data_mode: "video_only" 
+  num_workers: 4
+  
+training:
+  batch_size: 1
+  epochs: 100
+  num_frames: 16
+  learning_rate: 0.00002
+  optimizer: "adamw"
+  num_labels: 4
+
+  

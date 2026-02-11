@@ -1,0 +1,13 @@
+# .gitignore
+venv/
+__pycache__/
+*.pth
+*.pt
+*.ckpt
+outputs/
+data/
+.DS_Store
+*.xlsx
+results/ 
+videomae_experiment/ 
+*.mp4

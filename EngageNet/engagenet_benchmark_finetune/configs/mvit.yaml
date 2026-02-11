@@ -1,0 +1,13 @@
+defaults:
+  - base_finetune
+
+modality: "video"
+
+model:
+  name: "MViT"
+  finetune: true
+
+  variant: "mvitv2_base.fb_in1k"
+  pretrained: True
+
+batch_size: 1

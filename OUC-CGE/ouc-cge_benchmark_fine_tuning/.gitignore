@@ -1,0 +1,6 @@
+venv/ 
+OUC-CGE/ 
+outputs/ 
+results/ 
+videomae_experiment/ 
+*.mp4 

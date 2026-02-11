@@ -1,0 +1,9 @@
+defaults:
+  - base
+
+modality: "video"
+
+model:
+  name: "TimeSformer"
+  variant: "facebook/timesformer-base-finetuned-k400"
+  pretrained: True

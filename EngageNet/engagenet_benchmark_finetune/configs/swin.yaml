@@ -1,0 +1,20 @@
+defaults:
+  - base_finetune
+
+modality: "video"
+# --- Model Specific Settings ---
+model:
+  # The name of the model architecture to use.
+  name: "Swin"
+  finetune: true
+
+  # Specific variant of the model from 'timm'.
+  # 'swin_base_patch4_window7_224_in22k' is a powerful model pretrained on ImageNet-22k.
+  variant: "swin_base_patch4_window7_224_in22k"
+  pretrained: True # Use pretrained weights
+
+# --- Overrides (Optional) ---
+# Swin Transformers can also be memory-intensive. We might need to adjust
+# the batch size if we encounter memory issues during training.
+#
+# batch_size: 8

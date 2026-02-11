@@ -1,0 +1,18 @@
+model_name: "timesformer"
+data_mode: "video_only"
+
+root_dir: "D:/Abdulaziz/ouc-cge_benchmark/OUC-CGE"
+results_dir: "D:/Abdulaziz/ouc-cge_benchmark/results/timesformer_experiment"
+train_csv: "train.csv"
+val_csv: "val.csv"
+test_csv: "test.csv"
+
+epochs: 100
+batch_size: 8 
+num_workers: 4
+learning_rate: 0.0001
+optimizer: "AdamW"
+class_weights: [0.84, 1.21, 0.95]
+
+num_frames: 16
+target_audio_len: 1024

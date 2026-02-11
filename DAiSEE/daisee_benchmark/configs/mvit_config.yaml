@@ -1,0 +1,16 @@
+model_name: "mvit"
+output_dir: "D:/Abdulaziz/daisee_benchmark/results/mvit"
+
+data:
+  raw_data_root: "D:/Abdulaziz/daisee_benchmark/DAiSEE_Dataset_Raw/daisee_dataset/DAiSEE"
+  data_mode: "video_only"
+  use_audio: false
+  num_workers: 4
+  
+training:
+  batch_size: 4 # MViT is large, start with a small batch size
+  epochs: 56
+  num_frames: 16
+  learning_rate: 0.0001
+  optimizer: "adamw"
+  num_labels: 4

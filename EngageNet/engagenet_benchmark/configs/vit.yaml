@@ -1,0 +1,13 @@
+defaults:
+  - base
+
+modality: "video"
+
+model:
+  name: "ViT"
+  variant: "vit_base_patch16_224_in21k"
+  pretrained: True 
+
+batch_size: 2
+num_frames: 16
+num_workers: 4
