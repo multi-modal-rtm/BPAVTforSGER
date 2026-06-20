@@ -28,7 +28,7 @@ class FocalLoss(nn.Module):
     This loss function is designed to address class imbalance by
     down-weighting the loss assigned to well-classified examples.
     """
-    def __init__(self, alpha=1, gamma=2, reduction='mean'):
+    def __init__(self, alpha=1, gamma=3, reduction='mean'):
         super(FocalLoss, self).__init__()
         self.alpha = alpha
         self.gamma = gamma
